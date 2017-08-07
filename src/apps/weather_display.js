@@ -24,10 +24,8 @@
   let store = {};
 
   worker(state.api.service, state.api.parameters);
-  setInterval(() => {
-    removeElementById('__scroll-items');
-    worker(state.api.service, state.api.parameters);
-  }, state.tickerRefreshInterval);
+  removeElementById('__scroll-items');
+  worker(state.api.service, state.api.parameters);
 
   /**
    * Main worker function.
